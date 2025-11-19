@@ -1,0 +1,45 @@
+﻿@model PruebaTecnica.Models.Cliente
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Buscar Cliente";
+}
+
+<h2>Buscar Cliente por ID (API)</h2>
+
+<div class="form-group">
+    <label>ID del Cliente</label>
+    <input type="number" id="clienteId" class="form-control" required />
+</div>
+
+<button id="btnBuscar" class="btn btn-primary">Buscar</button>
+
+<hr />
+
+<div id="resultado"></div>
+
+<script>
+    $("#btnBuscar").click(function () {
+
+        var id = $("#clienteId").val();
+
+        $.ajax({
+            url: "/ClientesApi/GetCliente/" + id,
+            method: "GET",
+            success: function (res) {
+
+                $("#resultado").html(`
+                    <div class="card p-3" style="border:1px solid #ccc;">
+                        <p><strong>Nombre:</strong> ${res.Nombre}</p>
+                        <p><strong>Apellido:</strong> ${res.Apellido}</p>
+                        <p><strong>Edad:</strong> ${res.Edad} años</p>
+                    </div>
+                `);
+            },
+            error: function () {
+                $("#resultado").html("<div class='alert alert-danger'>Cliente no encontrado</div>");
+            }
+        });
+
+    });
+</script>

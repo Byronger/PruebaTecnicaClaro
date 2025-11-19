@@ -1,0 +1,28 @@
+﻿@model PruebaTecnica.Models.Cliente
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Palíndromos";
+}
+<h2>Contador de palíndromos</h2>
+
+<form method="post">
+    <label>Ingrese texto:</label>
+    <input type="text" name="texto" class="form-control" required />
+
+    <br />
+    <button class="btn btn-primary">Procesar</button>
+</form>
+
+@if (ViewBag.Cantidad != null)
+{
+    <hr />
+    <h3>Se encontraron: @ViewBag.Cantidad palíndromos</h3>
+
+    <ul>
+        @foreach (string p in ViewBag.Resultado)
+        {
+            <li>@p</li>
+        }
+    </ul>
+}

@@ -1,0 +1,33 @@
+﻿@model PruebaTecnica.Models.Cliente
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Registrar Cliente";
+}
+
+<h2>Registrar Cliente</h2>
+
+@using (Html.BeginForm("Create", "ClientesApi", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nombre)
+        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nombre)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Apellido)
+        @Html.TextBoxFor(m => m.Apellido, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Apellido)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FechaNacimiento)
+        @Html.TextBoxFor(m => m.FechaNacimiento, new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.FechaNacimiento)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+}

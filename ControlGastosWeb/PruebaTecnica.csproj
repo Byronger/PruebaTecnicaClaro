@@ -167,17 +167,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\DepositosController.cs" />
-    <Compile Include="Controllers\FondosMonetariosController.cs" />
-    <Compile Include="Controllers\GastosController.cs" />
+    <Compile Include="Controllers\ConsumoController.cs" />
+    <Compile Include="Controllers\PalindromosController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ClientesApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ComparativoController.cs" />
-    <Compile Include="Controllers\MovimientosController.cs" />
-    <Compile Include="Controllers\PresupuestosController.cs" />
-    <Compile Include="Controllers\UsuariosController.cs" />
-    <Compile Include="Controllers\TiposGastoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,19 +252,8 @@
       <DependentUpon>202505140722564_MigraGastosCinco.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Depositos.cs" />
-    <Compile Include="Models\GastosDetalle.cs" />
-    <Compile Include="Models\GastosEncabezado.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\FondosMonetarios.cs" />
-    <Compile Include="Models\Comparativo.cs" />
-    <Compile Include="Models\Movimientos.cs" />
-    <Compile Include="Models\Presupuestos.cs" />
-    <Compile Include="Models\Usuarios.cs" />
-    <Compile Include="Models\TiposGasto.cs" />
-    <Compile Include="Models\UsuarioViewModel.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -322,40 +305,12 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\TiposGasto.cshtml" />
-    <Content Include="Views\Home\Usuarios.cshtml" />
-    <Content Include="Views\Home\FondoMonetario.cshtml" />
-    <Content Include="Views\TiposGasto\Index.cshtml" />
-    <Content Include="Views\TiposGasto\Create.cshtml" />
-    <Content Include="Views\TiposGasto\Edit.cshtml" />
-    <Content Include="Views\TiposGasto\Delete.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
-    <Content Include="Views\Usuarios\Create.cshtml" />
-    <Content Include="Views\Usuarios\Edit.cshtml" />
-    <Content Include="Views\Usuarios\Delete.cshtml" />
-    <Content Include="Views\FondosMonetarios\Index.cshtml" />
-    <Content Include="Views\FondosMonetarios\Create.cshtml" />
-    <Content Include="Views\FondosMonetarios\Edit.cshtml" />
-    <Content Include="Views\FondosMonetarios\Delete.cshtml" />
-    <Content Include="Views\Presupuestos\Index.cshtml" />
-    <Content Include="Views\Presupuestos\Create.cshtml" />
-    <Content Include="Views\Presupuestos\Edit.cshtml" />
-    <Content Include="Views\Presupuestos\Delete.cshtml" />
-    <Content Include="Views\Depositos\Index.cshtml" />
-    <Content Include="Views\Depositos\Create.cshtml" />
-    <Content Include="Views\Gastos\Index.cshtml" />
-    <Content Include="Views\Gastos\Create.cshtml" />
-    <Content Include="Views\Gastos\Edit.cshtml" />
-    <Content Include="Views\Movimientos\Index.cshtml" />
-    <Content Include="Views\Comparativo\Index.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Palindromos\Index.cshtml" />
+    <Content Include="Views\Clientes\Consumo.cshtml" />
+    <Content Include="Views\Consumo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

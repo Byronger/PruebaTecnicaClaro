@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Sistema de Control de Gastos</title>
+    <title>Prueba</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -12,7 +12,7 @@
 <style>
     .custom-navbar {
         background: #1c1f26;
-        border-bottom: 3px solid #ff8c00; /* línea naranja */
+        border-bottom: 3px solid #ff8c00;
     }
 
     .navbar-brand {
@@ -48,44 +48,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @Html.ActionLink("SMARTBIT", "Index", "Home", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Prueba", "Index", "Home", null, new { @class = "navbar-brand" })
                 </div>
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-
-                        <!-- Mantenimientos -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mantenimientos <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Tipos de Gasto", "Index", "TiposGasto")</li>
-                                <li>@Html.ActionLink("Usuarios", "Index", "Usuarios")</li>
-                                <li>@Html.ActionLink("Fondo Monetario", "Index", "FondosMonetarios")</li>
-                            </ul>
-                        </li>
-
-                        <!-- Movimientos -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Movimientos <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Presupuesto por usuario y tipo de gasto", "Index", "Presupuestos")</li>
-                                <li>@Html.ActionLink("Registros de gastos", "Index", "Gastos")</li>
-                                <li>@Html.ActionLink("Depósitos", "Index", "Depositos")</li>
-                            </ul>
-                        </li>
-
-                        <!-- Consultas y Reportes -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consultas y Reportes <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Consulta de movimientos", "Index", "Movimientos")</li>
-                                <li>@Html.ActionLink("Gráfico Comparativo de Presupuesto y Ejecución", "Index", "Comparativo")</li>
-                            </ul>
-                        </li>
+                        <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
+                        <li>@Html.ActionLink("Consulta Clientes", "Index", "Consumo")</li>
+                        <li>@Html.ActionLink("Palíndromos", "Index", "Palindromos")</li>
                     </ul>
-
-                    @Html.Partial("_LoginPartial")
                 </div>
             </div>
         </div>
@@ -98,7 +70,7 @@
         @if (!(currentController == "Account" && (currentAction == "Login" || currentAction == "Register")))
         {
             <footer>
-                <p>&copy; @DateTime.Now.Year - Sistema de Control de Gastos - Byron G. Santos P.</p>
+                <p>&copy; @DateTime.Now.Year - Byron G. Santos P.</p>
             </footer>
         }
     </div>
